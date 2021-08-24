@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous"></script>	
+	<title>mi primera pagina web</title>
+</head>
+<body>
+	<header>
+		<nav class="nav">
+			<div class="nav__logo-container">
+				<a href=""><img class="nav__logo" src="img/logo.png" alt=""><h2>MyUniversity</h2></a>
+			</div>
+			<ul class="nav__ul">
+				<li class="nav__li"><i class="fas fa-home"></i><a href="">Home</a></li>
+				<li class="nav__li"><i class="fas fa-users"></i><a href="">About us</a></li>
+				<li class="nav__li"><i class="fas fa-address-card"></i><a href="">Contact</a></li>
+				<li class="nav__li"><i class="fas fa-question-circle"></i><a href="">Help</a ></li>
+				<li class="nav__li"><i class="fas fa-user-circle"></i><a href="">Profile</a></li>
+			</ul>
+			<div class="nav__btn-responsive"><i class="fas fa-bars"></i></div>
+			<div class="nav__btnBackMenuGitbox"></div>
+		</nav>
+	</header>
+	<div class="main">
+		<div class="presentation-container">
+			<div class="presentation-tittleContainer">
+				<h2 class="presentation-tittle">
+					Your university career <br>
+						in one place
+				</h2>
+			</div>
+			<div class="login-container">
+				<form class="login">
+					<input type="email" class="login__input login__email" placeholder="Email">
+					<input type="password" class="login__input login__passwd" placeholder="Password">
+					<input type="submit" class="login__input login__submit" value="Login">
+					<button class="login__input login__register "><a href="register.html">Register</a></button>
+					<div class="login__input login__options">
+						<div class="login__remember-container">
+							<input type="checkbox" id="login__remember">
+							<label for="login__remember">Remember me</label>
+						</div>
+						<a href="">forget your password?</a>
+					</div>	
+				</form>
+			</div>
+		</div>		
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
