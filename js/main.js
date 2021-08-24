@@ -1,20 +1,26 @@
 
+particlesJS.load('particles-js', 'js/particlesjs-config.json');
+
 // boton resposive evento.
 
-const btnResponsive = document.querySelector(".nav__btn-responsive")
-const navUl= document.querySelector(".nav__ul")
-const btnBackMenuGitbox = document.querySelector(".nav__btnBackMenuGitbox")
-
+const btnResponsive = document.querySelector(".nav__btn-responsive");
+const navUl= document.querySelector(".nav__ul");
+const main = document.querySelector(".main");
 
 btnResponsive.addEventListener("click",()=>{
     navUl.classList.toggle("active");
     btnResponsive.classList.toggle("active");
-    btnBackMenuGitbox.classList.toggle("active");
+    main.classList.toggle("ResponsiveActive");
+    
 });
 
-btnBackMenuGitbox.addEventListener("click",()=>{
-    navUl.classList.toggle("active");
-    btnResponsive.classList.toggle("active");
-    btnBackMenuGitbox.classList.toggle("active");
+main.addEventListener("click",()=>{
+    if(navUl.className.includes("active")){
+        navUl.classList.toggle("active");
+        btnResponsive.classList.toggle("active");
+        main.classList.toggle("ResponsiveActive");
+    }
 });
+
+
 

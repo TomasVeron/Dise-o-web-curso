@@ -14,34 +14,36 @@
     <title>Register</title>
 </head>
 <body>
+    <div id="particles-js"></div>
     <div class="main">
         <div class="register-container">
             <form id="register">
                 <h2 class="register__tittle">Registrarse</h2>
                 <div class="register__input-container">
-                    <input type="text" class="register__input" id="register__nombre" placeholder="nombre" autocomplete="off">
-                    <label class="register__lbl"></label>
+                    <input type="text" class="register__input" id="register__nombre" autocomplete="off" required="">
+                    <label class="register__lbl"><span class="register__lbl-text">Nombre</span></label>
                 </div>
                 <div class="register__input-container">
-                    <input type="text"class="register__input" id="register__apellido" placeholder="apellido" autocomplete="off">
-                    <label class="register__lbl"></label>
+                    <input type="text"class="register__input" id="register__apellido" autocomplete="off" required="">
+                    <label class="register__lbl"><span class="register__lbl-text">Apellido</span></label>
                 </div>
                 <div class="register__input-container">
-                    <input type="email" class="register__input" id="register__email" placeholder="email" autocomplete="off">
-                    <label class="register__lbl"></label>
+                    <input type="email" class="register__input" id="register__email" autocomplete="off" required="">
+                    <label class="register__lbl"><span class="register__lbl-text">Email</span></label>
                 </div>
                 <div class="register__input-container">
-                    <input type="password" class="register__input" id="register__passwd" placeholder="contrasena" autocomplete="off">
-                    <label class="register__lbl"></label>
+                    <input type="password" class="register__input" id="register__passwd" autocomplete="off" required="">
+                    <label class="register__lbl"><span class="register__lbl-text">Contrasena</span></label>
                 </div>
                 <div class="register__input-container">
-                    <input type="password" class="register__input" id="register__passwd-2" placeholder="ingresa nuevamente la contrasena" autocomplete="off">
-                    <label class="register__lbl"></label>
+                    <input type="password" class="register__input" id="register__passwd-2" autocomplete="off" required="">
+                    <label class="register__lbl"><span class="register__lbl-text">Ingresa Nuevamente la Contrasena</span></label>
                 </div>
                 <input type="submit" class="register__input" id="register__btn-register" value="Crear Cuenta">
             </form>
         </div>
     </div>
+    <script src="js/particles.js"></script>
     <script src="js/register.js"></script>
 </body>
 </html>

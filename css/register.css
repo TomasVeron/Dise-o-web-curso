@@ -9,6 +9,13 @@ body{
 background: linear-gradient(90deg, rgba(50,95,163,1) 0%, rgba(19,67,129,1) 47%, rgba(2,0,36,1) 100%);
 }
 
+#particles-js{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
 .register-container{
     display: flex;
     align-items:center;
@@ -19,7 +26,7 @@ background: linear-gradient(90deg, rgba(50,95,163,1) 0%, rgba(19,67,129,1) 47%, 
     width: 500px;
     max-width: 100%;
     margin: auto;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 0 20px #000;
     background-color: #fffb;
     -webkit-border-radius: 15px;
@@ -35,22 +42,28 @@ background: linear-gradient(90deg, rgba(50,95,163,1) 0%, rgba(19,67,129,1) 47%, 
     color: var(--color-dominant);
 }
 
+.register__input-container{
+    position: relative;
+    overflow: hidden;
+    margin: 6px;
+    height: 80px;
+}
+
 .register__input{
     position: relative;
     display: block;
-    padding: 20px 3px;
     margin: 7px;
+    padding-left: 5px;
+    height: 100%;
     width: 100%;
     background-color: rgba(255, 255, 255, 0);
+    color: #000a;
     border: none;
     outline: none;
     z-index: 20;
 }
 
-.register__input-container{
-    position: relative;
-    overflow: hidden;
-}
+
 
 .register__lbl{
     position: absolute;
@@ -80,9 +93,25 @@ background: linear-gradient(90deg, rgba(50,95,163,1) 0%, rgba(19,67,129,1) 47%, 
 
 #register__btn-register{
     border: none;
-    margin-top: 30px;
+    height: 70px;
     color:#fff;
     background: rgb(50,95,163);
     background: linear-gradient(270deg, rgba(50,95,163,1) 0%, rgba(19,67,129,1) 47%, rgba(2,0,36,1) 100%);
 
 }
+
+.register__lbl-text{
+    position: absolute;
+    bottom: 23px;
+    left: 10px;
+    color: #000a;
+    transition: 0.3s ease;
+}
+
+.register__input:focus + .register__lbl .register__lbl-text, 
+.register__input:valid + .register__lbl .register__lbl-text{
+    transform: translateY(-150%);
+    color:var(--color-dominant);
+}
+
+

@@ -1,3 +1,5 @@
+particlesJS.load('particles-js', 'js/particlesjs-config.json');
+
 const btnRegistrarse = document.getElementById("register__btn-register");
 const formRegistro = document.getElementById("register");
 const inputNombre = document.getElementById("register__nombre");

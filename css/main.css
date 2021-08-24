@@ -1,5 +1,6 @@
 body{
     font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(8, 31, 61);
 }
 
 :root{
@@ -8,10 +9,6 @@ body{
 }
 
 /*destok*/
-
-.nav__btnBackMenuGitbox{
-    display: none;
-}
 
 .nav__btn-responsive{
     display: none;
@@ -27,6 +24,7 @@ body{
     height: 50px;
     top: 0;
     z-index: 100;
+    box-shadow: 0 0 10px #000;
 }
 
 .nav__logo-container{
@@ -80,15 +78,21 @@ body{
 
 .main{
     margin-top: 50px;
+    position: relative;
+    z-index: 150;
+}
+
+#particles-js{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
 }
 
 .presentation-container{
     display: flex;
     width: 100%;
     height: calc(100vh - 50px);
-    background-image: url("../img/student-social-internet-home-profession.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     flex-wrap: wrap;
     justify-content: space-between;
 
@@ -118,7 +122,6 @@ body{
     justify-content: center;
     align-items: center;
     width: 50%;
-    
 }
 
 .login{
@@ -214,28 +217,24 @@ body{
 
 
 
-@media screen and (max-width:750px) {
-    /* .body{
+@media screen and (max-width:768px) {
+    .body{
         overflow:hidden;
-    } */
-.presentation-container{
-    flex-direction: row;
-    justify-content: flex-start;
-    height: 100vh;
-}
+    }
 
-
-    .login-container, .presentation-tittleContainer{
-        width: 100%;
+    .presentation-container{
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 100vh;
     }
 
     .login-container{
+        width: 100%;
         padding: 18px;
     }
 
     .presentation-tittleContainer{
         display: none;
-        height: 40%;
     }
 
     .presentation-tittle{
@@ -246,6 +245,9 @@ body{
 
 
 @media screen and (max-width:700px) {
+    body{
+        overflow: hidden;
+    }
     .nav{
         flex-direction: column;
     }
@@ -280,15 +282,10 @@ body{
         transition: 0.2s;
     }
 
-
-    .nav__btnBackMenuGitbox.active{
-        position: absolute;
-        display: block;
-        background-color: #000b;
-        top: 50px;
-        left: 80%;
-        height: 100vh;
-        width: 20%;
+    .main.ResponsiveActive{
+        position: relative;
+        filter:brightness(20%);
+        z-index: 20;
     }
     
 
@@ -298,7 +295,7 @@ body{
 
     .nav__ul.active{
         transform: translateX(0%);
-        z-index: 9;
+        z-index: 30;
     }
     
     .nav__btn-responsive.active i{
