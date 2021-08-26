@@ -6,6 +6,7 @@ particlesJS.load('particles-js', 'js/particlesjs-config.json');
 const btnResponsive = document.querySelector(".nav__btn-responsive");
 const navUl= document.querySelector(".nav__ul");
 const main = document.querySelector(".main");
+const btnRegister = document.querySelector(".login__register");
 
 btnResponsive.addEventListener("click",()=>{
     navUl.classList.toggle("active");
@@ -21,6 +22,8 @@ main.addEventListener("click",()=>{
         main.classList.toggle("ResponsiveActive");
     }
 });
+
+
 
 
 
